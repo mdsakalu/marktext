@@ -29,6 +29,7 @@ jobs:
           node-version: 22.21.1
 
       - name: Sync package.json version from tag
+        shell: bash
         run: |
           VERSION="${GITHUB_REF_NAME#v}"
           npm pkg set version="${VERSION}"
